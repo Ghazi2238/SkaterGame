@@ -21,7 +21,7 @@ document.body.addEventListener('keydown', (e) => {
     }
 })
 
-function startGame(player)
+function startGame()
 {
     mountain.classList.add('game-mountains-move');
     park.classList.add('game-park-move');
@@ -45,15 +45,15 @@ function startGame(player)
 function jump()
 {
     if(!canJump) return;
-    setImage(player, './assets/images/skater/jump.gif');
+    setImage('./assets/images/skater/jump.gif');
     canJump = false;
     setTimeout(() => {
-        setImage(player, './assets/images/skater/roll.gif');
+        setImage('./assets/images/skater/roll.gif');
         canJump = true;
     }, 2000)
 }
 
-function setImage(player, link)
+function setImage(link)
 {
     player.setAttribute('src', `${link}`);
 }
