@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+.main-container,
+.console-body,
+.game-road,
+.console-control
+{
+    display: flex;
+    align-items: center;
+}
+
+body{
+    background-color: rgb(36, 36, 36);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container{
+    justify-content: center;
+    width: 100vw;
+    padding: 10rem 5rem;
+}
+
+.console-body{
+    height: 23rem;
+    border-radius: 25% / 40%;
+    width: 50rem;
+    justify-content: space-evenly;
+    background-color: rgb(0, 69, 69);
+}
+
+.console-screen{
+    width: 27rem;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.game-mountains{
+    background-image: url("./assets/images/landscape.png");
+    background-position: right;
+    background-repeat: repeat-x;
+    height: 14rem;
+    width: 200rem;
+}
+
+.game-info{
+    position: absolute;
+}
+
+.game-score{
+    position: relative;
+    left: 10rem;
+    top: 2rem;
+    border: 0.5rem solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    box-shadow: 0rem -0.25rem 0rem 0rem rgb(79, 36, 36) inset;
+    background-color: rgb(159, 73, 73);
+    border-radius: 20%/50%;
+    padding: 0.7rem 1.5rem;
+}
+
+.game-instructions{
+    background-color: rgb(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+    width: 15rem;
+    padding: 2rem 2rem;
+    position: relative;
+    left: 6rem;
+    top: 4rem;
+}
+
+.hide{
+    display: none;
+}
+
+.game-park{
+    background-image: url("./assets/images/park.png");
+    height: 6rem;
+    width: 200rem;
+    margin-top: -3.8rem;
+}
+
+.game-road{
+    background-image: url("./assets/images/road.png");
+    height: 4rem;
+    width: 200rem;
+    margin: -1.3rem 0rem;
+    padding: 2rem;
+}
+
+.game-player{
+    height: 6rem;
+    margin-bottom: 3rem;
+    position: absolute;
+    z-index: 10;
+}
+
+.game-stone{
+    height: 0.8rem;
+    position: relative;
+    margin-bottom: -0.4rem;
+    left: 25rem;
+}
+
+.stone1{
+    left: 17rem;
+}
+
+.stone2{
+    left: 23rem;
+}
+
+.stone3{
+    left: 10rem;
+}
+
+
+
+.game-mountains-move{
+    animation: move 180s linear infinite reverse;
+}
+
+.game-park-move{
+    animation: move 130s linear infinite reverse;
+}
+
+.game-road-move{
+    animation: move 80s linear infinite reverse;
+}
+
+.game-over{
+    position: absolute;
+    left: 30%;
+    top: 70%;
+}
+
+.game-park,
+.game-road{
+    background-position: right;
+    background-repeat: repeat-x;
+    background-size: 40rem auto;
+}
+
+.game-stop{
+    animation-play-state: paused;
+}
+
+@keyframes move{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+@keyframes obstacle {
+    100%{
+        transform: translate(-34rem);
+    }
+}
+
+.console-control{
+    justify-content: center;
+    width: 7rem;
+}
+
+.console-horizantal-control,
+.console-vertical-control{
+    background-color: rgb(187, 181, 76);
+}
+
+.console-horizantal-control{
+    height: 7rem;
+    width: 1.5rem;
+    position: absolute;
+    border-radius: 50% / 10%;
+}
+
+.console-vertical-control{
+    height: 1.5rem;
+    width: 7rem;
+    border-radius: 10% / 50%;
+}
+
+.console-button{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2rem 2rem;
+    gap: 1rem;
+    width: 5rem;
+    transform: rotate(45deg);
+}
+
+.console-buttons{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.console-buttons:nth-child(1){
+    background-color: rgb(156, 87, 87);
+}
+
+.console-buttons:nth-child(2){
+    background-color: rgb(128, 127, 127);
+}
+
+.console-buttons:nth-child(3){
+    background-color: rgb(89, 88, 139);
+}
+
+.console-buttons:nth-child(4){
+    background-color: rgb(187, 181, 76);
+}
